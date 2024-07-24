@@ -16,3 +16,4 @@ mono_crash.*.json
 /.godot
 /godot
 godot/
+.godot/editor/editor_layout.cfg
