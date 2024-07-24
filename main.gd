@@ -15,7 +15,7 @@ func new_game():
 	$Player.start($StartPosition.position)
 	
 	$StartTimer.start()
-	$HUD.show_message("Get ready...")
+	$HUD.show_message("Get ready!")
 	await $StartTimer.timeout  # czeka na sygnał
 	$ScoreTimer.start()
 	$MobTimer.start()
