@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8o8vvltx3i40"]
+[gd_scene load_steps=9 format=3 uid="uid://b8o8vvltx3i40"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_4p35e"]
 [ext_resource type="PackedScene" uid="uid://660vh2gfx08v" path="res://mob.tscn" id="2_620w7"]
 [ext_resource type="PackedScene" uid="uid://d26qrmljb5egs" path="res://Player.tscn" id="3_2w147"]
 [ext_resource type="PackedScene" uid="uid://dmkslxpwdq6fb" path="res://hud.tscn" id="4_jvrk6"]
+[ext_resource type="AudioStream" uid="uid://dva51otp5snk4" path="res://music/chiptune.ogg" id="5_hq2h6"]
+[ext_resource type="AudioStream" uid="uid://cldxawhmvxs4p" path="res://music/chiptune_menu.ogg" id="6_vcxfq"]
+[ext_resource type="AudioStream" uid="uid://dmwf3fj7b1bcf" path="res://music/game_over.ogg" id="7_8juea"]
 
 [sub_resource type="Curve2D" id="Curve2D_f6pom"]
 _data = {
@@ -43,6 +46,16 @@ one_shot = true
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(240, 360)
+
+[node name="main_bg" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hq2h6")
+
+[node name="main_menu_bg" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_vcxfq")
+autoplay = true
+
+[node name="main_game_over_bg" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_8juea")
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
 [connection signal="hit" from="Player" to="." method="game_over"]
