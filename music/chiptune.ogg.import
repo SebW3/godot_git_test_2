@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/chiptune.ogg-f2a2e1c7449d3958307e9fcffa35458f
 [params]
 
 loop=true
-loop_offset=21.0
+loop_offset=21.33
 bpm=180.0
 beat_count=0
 bar_beats=4
