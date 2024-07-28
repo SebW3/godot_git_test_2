@@ -1,3 +1,5 @@
+AudioStreamPlayer
+AudioStreamPlayer2D
 Marker2D
 Timer
 Button
@@ -10,5 +12,3 @@ PathFollow2D
 Path2D
 ColorRect
 Node
-VisibleOnScreenNotifier2D
-RigidBody2D

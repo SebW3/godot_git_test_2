@@ -19,6 +19,7 @@ func show_game_over():
 	$Button.show()
 
 func _on_button_pressed():
+	$button_pressed_bg.playing=true
 	$Button.hide()
 	emit_signal("start_game")
 

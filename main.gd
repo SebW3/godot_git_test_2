@@ -15,15 +15,21 @@ func new_game():
 	$Player.start($StartPosition.position)
 	
 	$StartTimer.start()
+	$main_menu_bg.playing=false
 	$HUD.show_message("Get ready!")
 	await $StartTimer.timeout  # czeka na sygnał
 	$ScoreTimer.start()
 	$MobTimer.start()
+	$main_bg.playing=true
 
 func game_over():
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
+	$main_bg.playing=false
+	$main_game_over_bg.playing=true
+	await get_tree().create_timer(2.0).timeout
+	$main_menu_bg.playing=true
 
 func _on_mob_timer_timeout():
 	var mob_spawn_location = $MobPath/MobSpawnLocation

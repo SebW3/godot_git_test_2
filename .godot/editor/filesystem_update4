@@ -1,9 +1,8 @@
 res://default_env.tres
-res://mob.tscn
-res://main.gd
 res://main.tscn
-res://Player.tscn
+res://main.gd
 res://Player.gd
-res://mob.gd
-res://hud.gd
+res://Player.tscn
+res://mob.tscn
 res://hud.tscn
+res://hud.gd
